@@ -1,0 +1,27 @@
+.headers {
+  background-color: #ff9900;
+  width: 100%;
+  height: 78px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  margin-left: 40px;
+}
+
+.header-center {
+  width: 473px;
+}
+
+.header-right {
+  display: flex;
+  margin-right: 40px;
+}
+
+.logo-header {
+  height: 39px;
+  width: 176px;
+}
