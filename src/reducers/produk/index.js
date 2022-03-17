@@ -10,6 +10,7 @@ const intialSTate = {
 
   ASCENDING_PRODUK: [],
   DESCENDING_PRODUK: [],
+  statusBtn: true,
 };
 
 const produk = (state = intialSTate, action) => {
@@ -32,6 +33,7 @@ const produk = (state = intialSTate, action) => {
       console.log("action ASCENDING_PRODUK", action);
       return {
         ...state,
+        statusBtn: action.payload.statusBtn,
         ASCENDING_PRODUK: state.getListProdukResult.sort(function ({ price: a }, { price: b }) {
           return a - b;
         }),
@@ -40,6 +42,7 @@ const produk = (state = intialSTate, action) => {
       console.log("action DESCENDING_PRODUK", action);
       return {
         ...state,
+        statusBtn: action.payload.statusBtn,
         DESCENDING_PRODUK: state.getListProdukResult.sort(function ({ price: a }, { price: b }) {
           return b - a;
         }),

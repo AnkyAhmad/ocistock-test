@@ -1,12 +1,14 @@
 import React from "react";
 import Cards from "../Cards/Cards";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ascendingProduk } from "../../actions/produkAction";
 import { descendingProduk } from "../../actions/produkAction";
-import "./Content.css";
 
 function Content() {
   const dispatch = useDispatch();
+  const { statusBtn } = useSelector((state) => state.produkReducer);
+
+  console.log(statusBtn);
 
   const ascendingPriceHandle = () => {
     dispatch(ascendingProduk());
@@ -18,22 +20,26 @@ function Content() {
 
   return (
     <>
-      <div className='container'>
-        <div className='container-filter'>
-          <p className='text-filter'>Filter :</p>
+      <div className='my-5 mx-10'>
+        <div className='flex items-center'>
+          <p className='font-medium text-base mr-5'>Filter :</p>
           <button
             type='button'
             onClick={() => ascendingPriceHandle()}
-            className='btn-filter-harting btn-bg-orange'
+            className={`mr-3 text-base text-white py-1.5 px-5 rounded-2xl font-semibold ${
+              statusBtn ? "bg-ocistock" : "bg-neutral-400"
+            }`}
           >
             Harga Terendah
           </button>
           <button
             type='button'
             onClick={() => descendingProdukHandle()}
-            className='btn-filter-harter btn-bg-grey'
+            className={`mr-3 text-base text-white py-1.5 px-5 rounded-2xl font-semibold ${
+              !statusBtn ? "bg-ocistock" : "bg-neutral-400"
+            }`}
           >
-            Harga Terendah
+            Harga Tertinggi
           </button>
         </div>
         <Cards />

@@ -1,13 +1,10 @@
 import React from "react";
-import "./Footer.css";
 
 function Footer() {
   return (
-    <>
-      <div className='footer'>
-        <div className='text-footer'>Copyright © PT Ocommerce Capital Indonesia.</div>
-      </div>
-    </>
+    <footer className='h-20 bg-ocistock flex'>
+      <p className='text-center text-white m-auto'>Copyright © PT Ocommerce Capital Indonesia.</p>
+    </footer>
   );
 }
 

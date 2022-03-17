@@ -2,20 +2,15 @@ import React from "react";
 import LogoOcistock from "../../Logo.jpg";
 import ButtonComp from "../Buttons/ButtonComp";
 import SearchBar from "../SearchBar/SearchBar";
-import "./Header.css";
 
 function Header() {
   return (
     <>
-      <div className='headers'>
-        <div className='header-left'>
-          <img className='logo-header' src={LogoOcistock} alt='' />
-        </div>
-        <div className='header-center'>
-          <SearchBar />
-        </div>
-        <div className='header-right'>
-          <ButtonComp classNameBtn='margin-r-20' textBtn='Login' />
+      <div className='h-20 bg-ocistock flex justify-between items-center'>
+        <img className='logo-header w-44 ml-10' src={LogoOcistock} alt='' />
+        <SearchBar />
+        <div className='flex mr-10'>
+          <ButtonComp classNameBtn='mr-5' textBtn='Login' />
           <ButtonComp textBtn='Daftar' />
         </div>
       </div>

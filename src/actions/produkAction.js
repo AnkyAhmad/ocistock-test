@@ -56,11 +56,17 @@ export const deleteProduk = (id_product) => {
 export const ascendingProduk = () => {
   return {
     type: "ASCENDING_PRODUK",
+    payload: {
+      statusBtn: true,
+    },
   };
 };
 
 export const descendingProduk = () => {
   return {
     type: "DESCENDING_PRODUK",
+    payload: {
+      statusBtn: false,
+    },
   };
 };
