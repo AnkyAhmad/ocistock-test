@@ -4,7 +4,7 @@ import ButtonComp from "../Buttons/ButtonComp";
 import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
 
-const Header = () => {
+function Header() {
   return (
     <>
       <div className='headers'>
@@ -21,6 +21,6 @@ const Header = () => {
       </div>
     </>
   );
-};
+}
 
 export default Header;
