@@ -1,4 +1,5 @@
 Soal :
+
 	1. slicing ui/ux bedasarkan link figma berikut : 
 		-URL : https://www.figma.com/file/WbUVIAamnDY5bsRkBEjkwN/Untitled?node-id=0%3A1
  
@@ -13,9 +14,10 @@ Soal :
 	4. data produk di redux dapat di hapus per item.
 	5. simpan project di repository github / gitlab.
 	6. kirim link repository github ke email
-
+	
+	
 Teknologi / Bahasa pemrograman yang di gunakan :
-
+	
 	- ReactJS / NextJS
 	- Redux
 	- Css / Scss / Sass / tailwind (tailwind nilai tambah)
